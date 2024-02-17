@@ -11,8 +11,20 @@
     <title>Cambridge May Balls 2024</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+	<link rel="manifest" href="manifest.json">
 </head>
 <body>
+	<script>
+		if ('serviceWorker' in navigator) {
+			window.addEventListener('load', () => {
+				navigator.serviceWorker.register('/service-worker.js').then(registration => {
+					console.log('ServiceWorker registration successful with scope: ', registration.scope);
+				}, err => {
+					console.log('ServiceWorker registration failed: ', err);
+				});
+			});
+		}
+	</script>
     <header>
         <div class="container">
             <h1>Cambridge May Balls 2024</h1>

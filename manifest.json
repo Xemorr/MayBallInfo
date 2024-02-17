@@ -1,0 +1,10 @@
+{
+    "short_name": "May Balls",
+    "name": "Cambridge May Balls",
+    "start_url": "/index.html",
+    "background_color": "#FFFFFF",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#000000"
+  }
+  
