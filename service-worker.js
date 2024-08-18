@@ -1,7 +1,7 @@
 self.addEventListener('install', (event) => {
     // Perform install steps
     event.waitUntil(
-        caches.open('YOUR_CACHE_NAME')
+        caches.open('MAY-BALL')
             .then((cache) => {
                 return cache.addAll([
                     '/',
@@ -13,16 +13,33 @@ self.addEventListener('install', (event) => {
     );
 });
 
+self.addEventListener('activate', (event) => {
+    const cacheWhitelist = ['MAY-BALL']; // List of cache versions to keep
+    event.waitUntil(
+        caches.keys().then((cacheNames) => {
+            return Promise.all(
+                cacheNames.map((cacheName) => {
+                    if (!cacheWhitelist.includes(cacheName)) {
+                        return caches.delete(cacheName);
+                    }
+                })
+            );
+        })
+    );
+});
+
 self.addEventListener('fetch', (event) => {
     event.respondWith(
-        caches.match(event.request)
-            .then((response) => {
-                // Cache hit - return response
-                if (response) {
-                    return response;
-                }
-                return fetch(event.request);
+        fetch(event.request).then((response) => {
+            if (response && response.status === 200) {
+                const responseClone = response.clone();
+                caches.open('MATURITY-TEST-7').then((cache) => {
+                    cache.put(event.request, responseClone);
+                });
             }
-        )
+            return response;
+        }).catch(() => {
+            return caches.match(event.request)
+        })
     );
 });
