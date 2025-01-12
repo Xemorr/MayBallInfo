@@ -117,10 +117,6 @@ main {
     transition: background-color 0.3s ease;
 }
 
-.buy-tickets-btn:not(:last-child) {
-    margin-right: 10px; /* Add space between buttons */
-}
-
 .buy-tickets-btn:hover {
     background-color: #002244;
 }
