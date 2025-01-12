@@ -102,6 +102,7 @@ main {
     width: 100%;
     gap: 10px;
     margin-top: 15px;
+    flex-direction: column; /* Stack items vertically */
 }
 
 .buy-tickets-btn {
