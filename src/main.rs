@@ -1,81 +1,47 @@
 #[macro_use] extern crate rocket;
 
-#[cfg(test)] mod tests;
+use std::fs;
+use rocket::fs::{relative, FileServer};
+use rocket_dyn_templates::{Template, context};
+use serde::{Deserialize, Serialize};
 
-#[derive(FromFormField)]
-enum Lang {
-    #[field(value = "en")]
-    English,
-    #[field(value = "ru")]
-    #[field(value = "ру")]
-    Russian
+#[get("/")]
+fn index() -> Template {
+    let file_content = fs::read_to_string("static/2025.json").expect("Failed to read JSON file");
+    let balls: Vec<Ball> = serde_json::from_str(&file_content).expect("Failed to parse JSON");
+    let mayballs: Vec<&Ball> = balls.iter().filter(|ball| ball.season == Season::MAY).collect();
+    let springballs: Vec<&Ball> = balls.iter().filter(|ball| ball.season == Season::SPRING).collect();
+    let winterballs: Vec<&Ball> = balls.iter().filter(|ball| ball.season == Season::WINTER).collect();
+    Template::render("index", context! { springballs: springballs, winterballs: winterballs, mayballs: mayballs })
 }
 
-#[derive(FromForm)]
-struct Options<'r> {
-    emoji: bool,
-    name: Option<&'r str>,
+#[derive(Deserialize, PartialEq, Eq, Serialize)]
+enum Season {
+    WINTER,
+    SPRING,
+    MAY,
 }
 
-// Try visiting:
-//   http://127.0.0.1:8000/hello/world
-#[get("/world")]
-fn world() -> &'static str {
-    "Hello, world!"
+#[derive(Deserialize, Serialize)]
+struct Link {
+    text: String,
+    url: String,
 }
 
-// Try visiting:
-//   http://127.0.0.1:8000/hello/мир
-#[get("/мир")]
-fn mir() -> &'static str {
-    "Привет, мир!"
-}
-
-// Try visiting:
-//   http://127.0.0.1:8000/wave/Rocketeer/100
-#[get("/<name>/<age>", rank = 2)]
-fn wave(name: &str, age: u8) -> String {
-    format!("👋 Hello, {} year old named {}!", age, name)
-}
-
-// Note: without the `..` in `opt..`, we'd need to pass `opt.emoji`, `opt.name`.
-//
-// Try visiting:
-//   http://127.0.0.1:8000/?emoji
-//   http://127.0.0.1:8000/?name=Rocketeer
-//   http://127.0.0.1:8000/?lang=ру
-//   http://127.0.0.1:8000/?lang=ру&emoji
-//   http://127.0.0.1:8000/?emoji&lang=en
-//   http://127.0.0.1:8000/?name=Rocketeer&lang=en
-//   http://127.0.0.1:8000/?emoji&name=Rocketeer
-//   http://127.0.0.1:8000/?name=Rocketeer&lang=en&emoji
-//   http://127.0.0.1:8000/?lang=ru&emoji&name=Rocketeer
-#[get("/?<lang>&<opt..>")]
-fn hello(lang: Option<Lang>, opt: Options<'_>) -> String {
-    let mut greeting = String::new();
-    if opt.emoji {
-        greeting.push_str("👋 ");
-    }
-
-    match lang {
-        Some(Lang::Russian) => greeting.push_str("Привет"),
-        Some(Lang::English) => greeting.push_str("Hello"),
-        None => greeting.push_str("Hi"),
-    }
-
-    if let Some(name) = opt.name {
-        greeting.push_str(", ");
-        greeting.push_str(name);
-    }
-
-    greeting.push('!');
-    greeting
+#[derive(Deserialize, Serialize)]
+struct Ball {
+    name: String,
+    date: String,
+    theme: String,
+    price: String,
+    season: Season,
+    links: Vec<Link>,
 }
 
 #[launch]
 fn rocket() -> _ {
     rocket::build()
-        .mount("/", routes![hello])
-        .mount("/hello", routes![world, mir])
-        .mount("/wave", routes![wave])
+        .attach(Template::fairing())
+        .mount("/", routes![index])
+        .mount("/", FileServer::from(relative!("static")))
 }
