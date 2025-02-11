@@ -1,4 +1,4 @@
-/* Basic Reset */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap'); /* Basic Reset */
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +6,6 @@
 }
 
 /* Import Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap');
 
 body {
     font-family: 'Lato', sans-serif;
@@ -31,7 +30,7 @@ header {
 }
 
 header h1 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Lato', serif;
     margin-bottom: 10px;
     font-size: 48px;
 }
