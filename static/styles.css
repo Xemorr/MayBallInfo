@@ -1,0 +1,158 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px; /* Maximum width of the container */
+    margin: auto;
+    padding: 0 15px; /* Padding on the sides */
+}
+
+header {
+    background: #003366;
+    color: #ffffff;
+    padding: 40px 0;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+    font-size: 48px;
+}
+
+header p {
+    font-size: 20px;
+}
+
+main {
+    min-height: 600px; /* Adjust height as necessary */
+}
+
+#featured-balls h2 {
+    font-family: 'Playfair Display', serif;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 36px;
+    text-align: center;
+	margin: 0 auto 30px auto;
+}
+
+#featured-balls {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Creates a responsive grid */
+    padding: 30px 0;
+}
+
+.ball-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    transition: box-shadow 0.3s ease-in-out;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.ball-item:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.ball-thumbnail {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.ball-date, .ball-theme {
+    margin: 5px 0;
+}
+
+.ball-theme {
+    font-style: italic;
+    color: #555;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.buttons-container {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+    margin-top: 15px;
+    flex-direction: column; /* Stack items vertically */
+}
+
+.buy-tickets-btn {
+    flex: 1;
+    text-align: center;
+    background-color: #003366;
+    color: white;
+    padding: 12px 0;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.buy-tickets-btn:hover {
+    background-color: #002244;
+}
+
+footer {
+    background: #003366;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+}
+
+@media (min-width: 768px) {
+    #featured-balls {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    #featured-balls {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    #featured-balls {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

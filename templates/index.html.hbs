@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta property="og:title" content="Mayball Information"/>
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.mayball.info" />
+<meta property="og:description" content="A list of all of the mayballs in 2025" />
+<meta name="theme-color" content="#00FFFF">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambridge May Balls 2025</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+	<link rel="manifest" href="/manifest.json">
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
+	<script>
+		if ('serviceWorker' in navigator) {
+			window.addEventListener('load', () => {
+				navigator.serviceWorker.register('/service-worker.js').then(registration => {
+					console.log('ServiceWorker registration successful with scope: ', registration.scope);
+				}, err => {
+					console.log('ServiceWorker registration failed: ', err);
+				});
+			});
+		}
+	</script>
+    <header>
+        <div class="container">
+            <h1>Cambridge May Balls 2025</h1>
+            <p>Navigate Cambridge's may week with greater ease!</p>
+			<p><a href="previous-years/2024.html">Check out last year's may balls!</a></p>
+        </div>
+    </header>
+    <main>
+		<div class="container">
+			<h2>The Spring Balls</h2>
+			<section id="featured-balls">
+                {{#each springballs}}
+                    <div class="ball-item">
+                        <h3>{{name}}</h3>
+                        <p class="ball-date">{{date}}</p>
+                        <p class="ball-theme">{{theme}}</p>
+                        <p class="ball-price">{{price}}</p>
+                        <div class="buttons-container">
+                            {{#each links}}
+                                <a href="{{url}}" class="buy-tickets-btn">{{text}}</a>
+                            {{/each}}
+                        </div>
+                    </div>
+                {{/each}}
+			</section>
+		</div>
+        <div class="container">
+			<h2>2025 May Balls</h2>
+            <section id="featured-balls">
+                {{#each mayballs}}
+                    <div class="ball-item">
+                        <h3>{{name}}</h3>
+                        <p class="ball-date">{{date}}</p>
+                        <p class="ball-theme">{{theme}}</p>
+                        <p class="ball-price">{{price}}</p>
+                        <div class="buttons-container">
+                            {{#each links}}
+                                <a href="{{url}}" class="buy-tickets-btn">{{text}}</a>
+                            {{/each}}
+                        </div>
+                    </div>
+                {{/each}}
+            </section>
+        </div>
+		<div class="container">
+			<h2>The Winter Balls (2024, not updated for 2025 yet)</h2>
+			<section id="featured-balls">
+                {{#each winterballs}}
+                    <div class="ball-item">
+                        <h3>{{name}}</h3>
+                        <p class="ball-date">{{date}}</p>
+                        <p class="ball-theme">{{theme}}</p>
+                        <p class="ball-price">{{price}}</p>
+                        <div class="buttons-container">
+                            {{#each links}}
+                                <a href="{{url}}" class="buy-tickets-btn">{{text}}</a>
+                            {{/each}}
+                        </div>
+                    </div>
+                {{/each}}
+			</section>
+		</div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>Want information updating? Contact me at admin (at) mayball.info</p>
+			<p>Alternatively, make a pull request on <a href="https://github.com/Xemorr/MayBallInfo">github</a></p>
+        </div>
+    </footer>
+</body>
+</html>
