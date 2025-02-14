@@ -20,38 +20,38 @@ fn index() -> Template {
     Template::render("index", context! { springballs: springballs, winterballs: winterballs, mayballs: mayballs })
 }
 
-fn transform_date(input: &str) -> Result<String, chrono::ParseError> {
-    // Parse the input date string into a NaiveDate
-    let naive_date = NaiveDate::parse_from_str(input, "%Y/%m/%d")?;
-
-    // Create a NaiveDateTime from the NaiveDate
-    let naive_datetime = NaiveDateTime::new(
-        naive_date,
-        chrono::NaiveTime::from_hms(11, 0, 0), // Set the time to 11:00:00
-    );
-
-    // Format the NaiveDateTime into the desired output format
-    let formatted_date = naive_datetime.format("%Y%m%dT%H%M%SZ").to_string();
-
-    Ok(formatted_date)
-}
-
-fn generate_ics(ball: &Ball) -> String {
-    let mut calendar = Calendar::new();
-
-    let mut ical_event = icalendar::Event::new();
-    ical_event.push(Property::new("SUMMARY", ball.name.clone()));
-    ical_event.push(Property::new("DTSTART", ball.date));
-    ical_event.push(Property::new("DTEND", "20231001T110000Z"));
-    calendar.push(ical_event);
-
-    calendar.to_string()
-}
-
-#[get("/calendar", data = "<ball>")]
-fn calendar(ball: String) -> content::RawHtml<String> {
-
-}
+// fn transform_date(input: &str) -> Result<String, chrono::ParseError> {
+//     // Parse the input date string into a NaiveDate
+//     let naive_date = NaiveDate::parse_from_str(input, "%Y/%m/%d")?;
+//
+//     // Create a NaiveDateTime from the NaiveDate
+//     let naive_datetime = NaiveDateTime::new(
+//         naive_date,
+//         chrono::NaiveTime::from_hms(11, 0, 0), // Set the time to 11:00:00
+//     );
+//
+//     // Format the NaiveDateTime into the desired output format
+//     let formatted_date = naive_datetime.format("%Y%m%dT%H%M%SZ").to_string();
+//
+//     Ok(formatted_date)
+// }
+//
+// fn generate_ics(ball: &Ball) -> String {
+//     let mut calendar = Calendar::new();
+//
+//     let mut ical_event = icalendar::Event::new();
+//     ical_event.push(Property::new("SUMMARY", ball.name.clone()));
+//     ical_event.push(Property::new("DTSTART", ball.date));
+//     ical_event.push(Property::new("DTEND", "20231001T110000Z"));
+//     calendar.push(ical_event);
+//
+//     calendar.to_string()
+// }
+//
+// #[get("/calendar", data = "<ball>")]
+// fn calendar(ball: String) -> content::RawHtml<String> {
+//
+// }
 
 #[launch]
 fn rocket() -> _ {
