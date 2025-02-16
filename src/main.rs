@@ -2,60 +2,59 @@ mod types;
 
 #[macro_use] extern crate rocket;
 
+use std::env::temp_dir;
 use std::fs;
-use icalendar::{Calendar, Property};
-use rocket::fs::{relative, FileServer};
-use rocket::response::content;
+use std::io::Write;
+use chrono::NaiveDate;
+use icalendar::{Calendar, Component};
+use rocket::fs::{relative, FileServer, NamedFile};
+use rocket::State;
 use rocket_dyn_templates::{Template, context};
-use serde::{Deserialize, Serialize};
-use crate::types::{Ball, Season};
+use tempfile::NamedTempFile;
+use crate::types::{Ball, MayballInfo};
 
 #[get("/")]
-fn index() -> Template {
-    let file_content = fs::read_to_string("static/2025.json").expect("Failed to read JSON file");
-    let balls: Vec<Ball> = serde_json::from_str(&file_content).expect("Failed to parse JSON");
-    let mayballs: Vec<&Ball> = balls.iter().filter(|ball| ball.season == Season::MAY).collect();
-    let springballs: Vec<&Ball> = balls.iter().filter(|ball| ball.season == Season::SPRING).collect();
-    let winterballs: Vec<&Ball> = balls.iter().filter(|ball| ball.season == Season::WINTER).collect();
-    Template::render("index", context! { springballs: springballs, winterballs: winterballs, mayballs: mayballs })
+fn index(state: &State<MayballInfo>) -> Template {
+    Template::render("index", context! { springballs: &*state.springballs, winterballs: &*state.winterballs, mayballs: &*state.mayballs })
 }
 
-// fn transform_date(input: &str) -> Result<String, chrono::ParseError> {
-//     // Parse the input date string into a NaiveDate
-//     let naive_date = NaiveDate::parse_from_str(input, "%Y/%m/%d")?;
-//
-//     // Create a NaiveDateTime from the NaiveDate
-//     let naive_datetime = NaiveDateTime::new(
-//         naive_date,
-//         chrono::NaiveTime::from_hms(11, 0, 0), // Set the time to 11:00:00
-//     );
-//
-//     // Format the NaiveDateTime into the desired output format
-//     let formatted_date = naive_datetime.format("%Y%m%dT%H%M%SZ").to_string();
-//
-//     Ok(formatted_date)
-// }
-//
-// fn generate_ics(ball: &Ball) -> String {
-//     let mut calendar = Calendar::new();
-//
-//     let mut ical_event = icalendar::Event::new();
-//     ical_event.push(Property::new("SUMMARY", ball.name.clone()));
-//     ical_event.push(Property::new("DTSTART", ball.date));
-//     ical_event.push(Property::new("DTEND", "20231001T110000Z"));
-//     calendar.push(ical_event);
-//
-//     calendar.to_string()
-// }
-//
-// #[get("/calendar", data = "<ball>")]
-// fn calendar(ball: String) -> content::RawHtml<String> {
-//
-// }
+async fn generate_ics(ball: &Ball) -> Option<NamedFile> {
+    let mut calendar: Calendar = Calendar::new();
+    let date: NaiveDate = NaiveDate::parse_from_str(&ball.date, "%Y/%m/%d").unwrap();
+
+    let mut ical_event = icalendar::Event::new();
+    ical_event.add_property("SUMMARY", ball.name.clone());
+    ical_event.add_property("DTSTART;VALUE=DATE", date.format("%Y%m%d").to_string());
+    ical_event.add_property("DTEND;VALUE=DATE", date.format("%Y%m%d").to_string());
+    calendar.push(ical_event);
+
+    let mut temp_file = NamedTempFile::new().expect("Could not create temp file");
+    let temp_path = temp_dir().join(format!("{}.ics", ball.name));
+    temp_file.write_all(calendar.to_string().as_bytes()).unwrap();
+    fs::rename(temp_file.path(), &temp_path).expect("Failed to rename temp file");
+    NamedFile::open(temp_file).await.ok()
+}
+
+#[get("/calendar", data = "<ball_name>")]
+async fn calendar(state: &State<MayballInfo>, ball_name: String) -> Option<NamedFile> {
+    let MayballInfo { mayballs, springballs, winterballs } = state.inner();
+    let ball_of_interest = mayballs
+        .iter()
+        .chain(springballs.iter())
+        .chain(winterballs.iter())
+        .find(|ball| ball.name == ball_name)
+        .expect("The ball name should exist!");
+
+    generate_ics(ball_of_interest).await
+}
 
 #[launch]
 fn rocket() -> _ {
+    let file_content = fs::read_to_string("static/2025.json").expect("Failed to read JSON file");
+    let balls: Vec<Ball> = serde_json::from_str(&file_content).expect("Failed to parse JSON");
+    let app_state = MayballInfo::new(balls);
     rocket::build()
+        .manage(app_state)
         .attach(Template::fairing())
         .mount("/", routes![index])
         .mount("/", FileServer::from(relative!("static")))
