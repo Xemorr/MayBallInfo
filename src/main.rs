@@ -4,15 +4,15 @@ mod types;
 
 use std::env::temp_dir;
 use std::fs;
-use std::io::Write;
-use chrono::{NaiveDate, Utc};
+use chrono_tz::Europe::London;
+use chrono::{NaiveDate, NaiveDateTime, NaiveTime, TimeZone, Utc};
 use icalendar::{Calendar, Component};
 use rocket::fs::{relative, FileServer, NamedFile};
 use rocket::State;
 use rocket_dyn_templates::{Template, context};
-use tempfile::NamedTempFile;
 use rand::seq::SliceRandom;
 use rand::thread_rng;
+use uuid::Uuid;
 use crate::types::{Ball, MayballInfo};
 
 #[get("/")]
@@ -21,21 +21,26 @@ fn index(state: &State<MayballInfo>) -> Template {
 }
 
 async fn generate_ics(ball: &Ball) -> std::io::Result<NamedFile> {
-    let mut calendar: Calendar = Calendar::new();
-    let date: NaiveDate = NaiveDate::parse_from_str(&ball.date, "%Y/%m/%d").unwrap();
+    let mut calendar = Calendar::new();
+    let date = NaiveDate::parse_from_str(&ball.date, "%Y/%m/%d").unwrap();
+
+    let local_start = London
+        .from_local_datetime(&NaiveDateTime::new(date, NaiveTime::from_hms_opt(0, 0, 0).unwrap()))
+        .single()
+        .unwrap();
 
     let mut ical_event = icalendar::Event::new();
     ical_event.add_property("SUMMARY", ball.name.clone());
-    ical_event.add_property("DTSTART;VALUE=DATE", date.format("%Y%m%d").to_string());
-    ical_event.add_property("DTEND;VALUE=DATE", date.format("%Y%m%d").to_string());
-    ical_event.add_property("DTSTAMP", Utc::now().to_string());
+    ical_event.add_property("DTSTART", local_start.format("%Y%m%dT%H%M%SZ").to_string());
+    ical_event.add_property("DTEND", local_start.format("%Y%m%dT%H%M%SZ").to_string());
+    ical_event.add_property("DTSTAMP", Utc::now().format("%Y%m%dT%H%M%SZ").to_string());
+    ical_event.add_property("UID", format!("{}@mayball.com", Uuid::new_v4()));
     calendar.push(ical_event);
 
-    let mut temp_file = NamedTempFile::new().expect("Could not create temp file");
-    let temp_path = temp_dir().join(format!("{}.ics", ball.name));
-    temp_file.write_all(calendar.to_string().as_bytes())?;
-    fs::rename(temp_file.path(), &temp_path).expect("Failed to rename temp file");
-    NamedFile::open(temp_path).await
+    let file_path = temp_dir().join(format!("{}.ics", ball.name));
+    fs::write(&file_path, calendar.to_string())?;
+
+    NamedFile::open(file_path).await
 }
 
 #[get("/calendar?<ball_name>")]
