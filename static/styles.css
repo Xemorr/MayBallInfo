@@ -23,12 +23,12 @@ header {
     color: #ffffff;
     padding: 40px 0;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 3em;
 }
 
 header h1 {
     font-family: 'Lato', serif;
-    margin-bottom: 10px;
+    margin-bottom: 0.2em;
     font-size: 3em;
 }
 
@@ -146,6 +146,16 @@ footer p {
     }
     #featured-balls {
         grid-template-columns: 1fr;
+    }
+    header {
+        margin-bottom: 1.5em;
+    }
+    header h1 {
+        font-size: 2em;
+        margin-bottom: 0.15em;
+    }
+    header p {
+        font-size: 1em;
     }
 }
 
