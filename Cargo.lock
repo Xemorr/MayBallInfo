@@ -818,6 +818,7 @@ version = "0.0.0"
 dependencies = [
  "chrono",
  "icalendar",
+ "rand",
  "rocket",
  "rocket_dyn_templates",
  "serde",

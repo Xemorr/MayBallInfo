@@ -11,6 +11,8 @@ use rocket::fs::{relative, FileServer, NamedFile};
 use rocket::State;
 use rocket_dyn_templates::{Template, context};
 use tempfile::NamedTempFile;
+use rand::seq::SliceRandom;
+use rand::thread_rng;
 use crate::types::{Ball, MayballInfo};
 
 #[get("/")]
@@ -59,7 +61,9 @@ async fn calendar(state: &State<MayballInfo>, ball_name: String) -> Option<Named
 #[launch]
 fn rocket() -> _ {
     let file_content = fs::read_to_string("static/2025.json").expect("Failed to read JSON file");
-    let balls: Vec<Ball> = serde_json::from_str(&file_content).expect("Failed to parse JSON");
+    let mut balls: Vec<Ball> = serde_json::from_str(&file_content).expect("Failed to parse JSON");
+    balls.shuffle(&mut thread_rng());
+    balls.sort_by(|ball1, ball2| ball1.links.len().cmp(&ball2.links.len()));
     let app_state = MayballInfo::new(balls);
     rocket::build()
         .manage(app_state)
