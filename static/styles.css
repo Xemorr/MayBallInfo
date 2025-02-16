@@ -29,29 +29,15 @@ header {
 header h1 {
     font-family: 'Lato', serif;
     margin-bottom: 10px;
-    font-size: 48px;
+    font-size: 3em;
 }
 
 header p {
-    font-size: 20px;
+    font-size: 1.5em;
 }
 
 main {
     min-height: 600px; /* Adjust height as necessary */
-}
-
-#featured-balls h2 {
-    display: grid;
-    grid-gap: 30px;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    padding: 30px 0;
-    justify-items: center;
-    font-family: 'Playfair Display', serif;
-    color: #333;
-    margin-bottom: 30px;
-    font-size: 36px;
-    text-align: center;
-	margin: 0 auto 30px auto;
 }
 
 #featured-balls {
