@@ -52,7 +52,7 @@ impl Serialize for Ball {
     {
         let date = NaiveDate::parse_from_str(&self.date, "%Y/%m/%d").unwrap();
         let formatted_date = format!(
-            "{} the {} of {} {}",
+            "{}, {} {} {}",
             date.format("%A"),
             ordinal(date.day()),
             date.format("%B"),

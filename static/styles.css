@@ -84,6 +84,32 @@ main {
     margin: 5px 0;
 }
 
+.ball-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.ball-header h3 {
+    flex: 1;
+}
+
+.calendar-download {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+    position: absolute;
+    fill: #ffffff;
+    right: 1%;
+    top: 5%;
+}
+
+.calendar-download:hover svg {
+    fill: #007bff;
+}
+
 .ball-theme {
     font-style: italic;
     color: #555;

@@ -42,17 +42,7 @@
 			<h2>The Spring Balls</h2>
 			<section id="featured-balls">
                 {{#each springballs}}
-                    <div class="ball-item">
-                        <h3>{{name}}</h3>
-                        <p class="ball-date">{{date}}</p>
-                        <p class="ball-theme">{{theme}}</p>
-                        <p class="ball-price">{{price}}</p>
-                        <div class="buttons-container">
-                            {{#each links}}
-                                <a href="{{url}}" class="buy-tickets-btn">{{text}}</a>
-                            {{/each}}
-                        </div>
-                    </div>
+                    {{> ball_item}}
                 {{/each}}
 			</section>
 		</div>
@@ -60,17 +50,7 @@
 			<h2>2025 May Balls</h2>
             <section id="featured-balls">
                 {{#each mayballs}}
-                    <div class="ball-item">
-                        <h3>{{name}}</h3>
-                        <p class="ball-date">{{date}}</p>
-                        <p class="ball-theme">{{theme}}</p>
-                        <p class="ball-price">{{price}}</p>
-                        <div class="buttons-container">
-                            {{#each links}}
-                                <a href="{{url}}" class="buy-tickets-btn">{{text}}</a>
-                            {{/each}}
-                        </div>
-                    </div>
+                    {{> ball_item}}
                 {{/each}}
             </section>
         </div>
@@ -78,17 +58,7 @@
 			<h2>The Winter Balls (2024, not updated for 2025 yet)</h2>
 			<section id="featured-balls">
                 {{#each winterballs}}
-                    <div class="ball-item">
-                        <h3>{{name}}</h3>
-                        <p class="ball-date">{{date}}</p>
-                        <p class="ball-theme">{{theme}}</p>
-                        <p class="ball-price">{{price}}</p>
-                        <div class="buttons-container">
-                            {{#each links}}
-                                <a href="{{url}}" class="buy-tickets-btn">{{text}}</a>
-                            {{/each}}
-                        </div>
-                    </div>
+                    {{> ball_item}}
                 {{/each}}
 			</section>
 		</div>

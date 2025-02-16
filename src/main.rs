@@ -18,7 +18,7 @@ fn index(state: &State<MayballInfo>) -> Template {
     Template::render("index", context! { springballs: &*state.springballs, winterballs: &*state.winterballs, mayballs: &*state.mayballs })
 }
 
-async fn generate_ics(ball: &Ball) -> Option<NamedFile> {
+async fn generate_ics(ball: &Ball) -> std::io::Result<NamedFile> {
     let mut calendar: Calendar = Calendar::new();
     let date: NaiveDate = NaiveDate::parse_from_str(&ball.date, "%Y/%m/%d").unwrap();
 
@@ -30,22 +30,30 @@ async fn generate_ics(ball: &Ball) -> Option<NamedFile> {
 
     let mut temp_file = NamedTempFile::new().expect("Could not create temp file");
     let temp_path = temp_dir().join(format!("{}.ics", ball.name));
-    temp_file.write_all(calendar.to_string().as_bytes()).unwrap();
+    temp_file.write_all(calendar.to_string().as_bytes())?;
     fs::rename(temp_file.path(), &temp_path).expect("Failed to rename temp file");
-    NamedFile::open(temp_file).await.ok()
+    NamedFile::open(temp_path).await
 }
 
-#[get("/calendar", data = "<ball_name>")]
+#[get("/calendar?<ball_name>")]
 async fn calendar(state: &State<MayballInfo>, ball_name: String) -> Option<NamedFile> {
+    println!("{}", ball_name);
     let MayballInfo { mayballs, springballs, winterballs } = state.inner();
-    let ball_of_interest = mayballs
+    let result = mayballs
         .iter()
         .chain(springballs.iter())
         .chain(winterballs.iter())
         .find(|ball| ball.name == ball_name)
-        .expect("The ball name should exist!");
-
-    generate_ics(ball_of_interest).await
+        .map(generate_ics)
+        .unwrap()
+        .await;
+    match result {
+        Ok(value) => Option::from(value),
+        Err(error) => {
+            println!("Error: {:?}", error);
+            None
+        }
+    }
 }
 
 #[launch]
@@ -56,6 +64,6 @@ fn rocket() -> _ {
     rocket::build()
         .manage(app_state)
         .attach(Template::fairing())
-        .mount("/", routes![index])
+        .mount("/", routes![index, calendar])
         .mount("/", FileServer::from(relative!("static")))
 }
