@@ -5,7 +5,7 @@ mod types;
 use std::env::temp_dir;
 use std::fs;
 use std::io::Write;
-use chrono::NaiveDate;
+use chrono::{NaiveDate, Utc};
 use icalendar::{Calendar, Component};
 use rocket::fs::{relative, FileServer, NamedFile};
 use rocket::State;
@@ -28,6 +28,7 @@ async fn generate_ics(ball: &Ball) -> std::io::Result<NamedFile> {
     ical_event.add_property("SUMMARY", ball.name.clone());
     ical_event.add_property("DTSTART;VALUE=DATE", date.format("%Y%m%d").to_string());
     ical_event.add_property("DTEND;VALUE=DATE", date.format("%Y%m%d").to_string());
+    ical_event.add_property("DTSTAMP", Utc::now().to_string());
     calendar.push(ical_event);
 
     let mut temp_file = NamedTempFile::new().expect("Could not create temp file");
