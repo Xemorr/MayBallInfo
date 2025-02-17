@@ -241,17 +241,21 @@
   {
     "name": "Newnham MCR Garden Party",
     "date": "2025/06/26",
-    "theme": "Unannounced",
-    "price": "Unannounced",
+    "theme": "A Surreal Soirée",
+    "price": "£55 members and Grange Road; £65 non members",
     "season": "MAY",
     "links": [
+      {
+        "text": "Ticketing",
+        "url": "https://bookoxex.com/Go/ASurrealSoire/"
+      },
       {
         "text": "Instagram",
         "url": "https://www.instagram.com/mcrnewnhamgardenparty/"
       },
       {
         "text": "Website",
-        "url": "https://mcrnewnhamgardenparty.com/"
+        "url": "https://asurrealsoirée.my.canva.site"
       }
     ]
   },
