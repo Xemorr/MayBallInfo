@@ -1,0 +1,369 @@
+[
+  {
+    "name": "Girton Spring Ball",
+    "date": "2025/03/21",
+    "theme": "Carnival of Chaos",
+    "price": "£150 girton, £170 guest",
+    "season": "SPRING",
+    "links": [
+      {
+        "text": "Website",
+        "url": "https://girtonspringball.com/"
+      },
+      {
+        "text": "Tickets",
+        "url": "https://ticketing.girtonspringball.com/"
+      }
+    ]
+  },
+  {
+    "name": "Clare Hall May Event",
+    "date": "2025/06/20",
+    "theme": "TBC",
+    "price": "£TBC",
+    "season": "MAY",
+    "links": [
+      {
+        "text": "Website",
+        "url": "https://www.clarehall.cam.ac.uk/events/clare-hall-may-week-event/"
+      }
+    ]
+  },
+  {
+    "name": "Corpus Christi May Ball",
+    "date": "2025/06/27",
+    "theme": "The Elements",
+    "price": "£190",
+    "season": "MAY",
+    "links": [
+      {
+        "text": "Facebook",
+        "url": "https://www.facebook.com/corpusmayball/"
+      },
+      {
+        "text": "Website",
+        "url": "https://www.corpus-may-ball.com/"
+      }
+    ]
+  },
+  {
+    "name": "Downing May Ball",
+    "date": "2025/06/24",
+    "theme": "Antony and Cleopatra",
+    "price": "£205",
+    "season": "MAY",
+    "links": [
+      {
+        "text": "Website",
+        "url": "https://downingball.co.uk/"
+      },
+      {
+        "text": "Instagram",
+        "url": "https://www.instagram.com/downingmayball/"
+      },
+      {
+        "text": "Workers",
+        "url": "https://docs.google.com/forms/d/e/1FAIpQLSfpwV4KkSYuLTeoMiXoGQebuyxwCnM1OYMVSB8AwHiPqX8uYQ/viewform"
+      }
+    ]
+  },
+  {
+    "name": "Homerton May Ball",
+    "date": "2025/06/20",
+    "theme": "TBC",
+    "price": "£TBC",
+    "season": "MAY",
+    "links": [
+      {
+        "text": "Instagram",
+        "url": "https://www.instagram.com/homertonmayball/"
+      },
+      {
+        "text": "Website",
+        "url": "https://www.homertonmayball.com/"
+      }
+    ]
+  },
+  {
+    "name": "Robinson May Ball",
+    "date": "2025/06/20",
+    "theme": "TBC",
+    "price": "£155 (last year)",
+    "season": "MAY",
+    "links": [
+      {
+        "text": "Instagram",
+        "url": "https://www.instagram.com/robinsonmayball/"
+      },
+      {
+        "text": "Workers",
+        "url": "https://docs.google.com/forms/d/e/1FAIpQLSc9sJn10z98fLno4Rg0lERthpQfxfkPgJyh4hYBRzRKE8vYGA/viewform"
+      }
+    ]
+  },
+  {
+    "name": "Queens' May Ball",
+    "date": "2025/06/24",
+    "theme": "TBC",
+    "price": "£TBC",
+    "season": "MAY",
+    "links": [
+      {
+        "text": "Website",
+        "url": "https://queensball.com/"
+      }
+    ]
+  },
+  {
+    "name": "Sidney Sussex May Ball",
+    "date": "2025/06/21",
+    "theme": "TBC",
+    "price": "£169.50 (last year)",
+    "season": "MAY",
+    "links": [
+      {
+        "text": "Website",
+        "url": "https://sidney.mayball.io/"
+      }
+    ]
+  },
+  {
+    "name": "Murray Edwards Garden Party",
+    "date": "2025/06/22",
+    "theme": "TBC",
+    "price": "£TBC",
+    "season": "MAY",
+    "links": [
+      {
+        "text": "Instagram",
+        "url": "https://www.instagram.com/murrayedwardsgardenparty/"
+      }
+    ]
+  },
+  {
+    "name": "Emmanuel May Ball",
+    "date": "2025/06/22",
+    "theme": "TBC",
+    "price": "£185 (last year)",
+    "season": "MAY",
+    "links": [
+      {
+        "text": "Ticketing",
+        "url": "https://tickets.emmamayball.co.uk/"
+      },
+      {
+        "text": "Website",
+        "url": "https://emmamayball.co.uk/"
+      }
+    ]
+  },
+  {
+    "name": "Jesus May Ball",
+    "date": "2025/06/23",
+    "theme": "TBC",
+    "price": "£214",
+    "season": "MAY",
+    "links": [
+      {
+        "text": "Website",
+        "url": "https://jesusmayball.com/"
+      },
+      {
+        "text": "Tickets",
+        "url": "https://tickets.jesusmayball.com/JMB/JMB25/"
+      }
+    ]
+  },
+  {
+    "name": "Trinity May Ball",
+    "date": "2025/06/23",
+    "theme": "N/A",
+    "price": "£270 per person last year",
+    "season": "MAY",
+    "links": [
+      {
+        "text": "Ticketing",
+        "url": "https://mgmt.trinityball.co.uk/login"
+      },
+      {
+        "text": "Website",
+        "url": "https://www.trinityball.co.uk/"
+      }
+    ]
+  },
+  {
+    "name": "Clare May Ball",
+    "date": "2025/06/24",
+    "theme": "TBC",
+    "price": "£125 (last year)",
+    "season": "MAY",
+    "links": [
+      {
+        "text": "Instagram",
+        "url": "https://www.instagram.com/claremayball2025/"
+      }
+    ]
+  },
+  {
+    "name": "St John's College May Ball",
+    "date": "2025/06/24",
+    "theme": "Revealed to attendees on the night of the ball",
+    "price": "£450 for two",
+    "season": "MAY",
+    "links": [
+      {
+        "text": "Ticketing",
+        "url": "https://tickets.mayball.org/"
+      },
+      {
+        "text": "Website",
+        "url": "https://mayball.org/"
+      }
+    ]
+  },
+  {
+    "name": "Newnham JCR Garden Party",
+    "date": "2025/06/24",
+    "theme": "TBC",
+    "price": "Last year: £60 (alcohol), £55 (otherwise)",
+    "season": "MAY",
+    "links": [
+      {
+        "text": "Website",
+        "url": "https://www.newnhamgardenparty2024.com/"
+      },
+      {
+        "text": "Instagram",
+        "url": "https://www.instagram.com/newnham.gardenparty/"
+      }
+    ]
+  },
+  {
+    "name": "Newnham MCR Garden Party",
+    "date": "2025/06/26",
+    "theme": "A Surreal Soirée",
+    "price": "£55 members and Grange Road; £65 non members",
+    "season": "MAY",
+    "links": [
+      {
+        "text": "Ticketing",
+        "url": "https://bookoxex.com/Go/ASurrealSoire/"
+      },
+      {
+        "text": "Instagram",
+        "url": "https://www.instagram.com/mcrnewnhamgardenparty/"
+      },
+      {
+        "text": "Website",
+        "url": "https://asurrealsoirée.my.canva.site"
+      }
+    ]
+  },
+  {
+    "name": "King's Affair",
+    "date": "2025/06/25",
+    "theme": "TBC",
+    "price": "£TBC",
+    "season": "MAY",
+    "links": [
+      {
+        "text": "Website",
+        "url": "https://kingsaffair.co.uk/"
+      }
+    ]
+  },
+  {
+    "name": "Pembroke College May Ball",
+    "date": "2025/06/25",
+    "theme": "TBC",
+    "price": "£198 (last year)",
+    "season": "MAY",
+    "links": [
+      {
+        "text": "Website",
+        "url": "https://www.pembrokemayball.co.uk/"
+      },
+      {
+        "text": "Instagram",
+        "url": "https://www.instagram.com/pembrokemayball/"
+      }
+    ]
+  },
+  {
+    "name": "Trinity Hall June Event",
+    "date": "2025/06/26",
+    "theme": "TBC",
+    "price": "£TBC",
+    "season": "MAY",
+    "links": [
+      {
+        "text": "Instagram",
+        "url": "https://www.instagram.com/thejuneevent/?hl=en-gb"
+      },
+      {
+        "text": "Website",
+        "url": "https://www.thjuneevent.co.uk/"
+      }
+    ]
+  },
+  {
+    "name": "Hughes Hall May Event",
+    "date": "2025/06/21",
+    "theme": "TBC",
+    "price": "£TBC",
+    "season": "MAY",
+    "links": [
+      {
+        "text": "Instagram",
+        "url": "https://www.instagram.com/hughesmayball/"
+      }
+    ]
+  },
+  {
+    "name": "Magdalene May Ball",
+    "date": "2025/06/25",
+    "theme": "No theme",
+    "price": "Internal: £215, External: £260",
+    "season": "MAY",
+    "links": [
+      {
+        "text": "Website",
+        "url": "http://magdalenemayball.com/"
+      },
+      {
+        "text": "Workers",
+        "url": "https://docs.google.com/forms/d/e/1FAIpQLSd88xa2TlRx9eJwF7dY2-nbudDiwJflrW3LCL9qBEjlBV50Rg/viewform"
+      }
+    ]
+  },
+  {
+    "name": "Hawks & Ospreys Event 2025",
+    "date": "2025/06/20",
+    "theme": "TBC",
+    "price": "£TBC",
+    "season": "MAY",
+    "links": [
+      {
+        "text": "Instagram",
+        "url": "https://www.instagram.com/hawksclubcambridge/"
+      }
+    ]
+  },
+  {
+    "name": "Selwyn Snowball",
+    "date": "2024/12/06",
+    "theme": "Saisons",
+    "price": "£109 Standard, £119 VIP",
+    "season": "WINTER",
+    "links": [
+      {
+        "text": "Ticketing",
+        "url": "https://selwyn.mayball.cloud/"
+      },
+      {
+        "text": "Website",
+        "url": "https://www.instagram.com/selwyn_snowball/"
+      }
+    ]
+  }
+]

@@ -1,0 +1,18 @@
+<div class="ball-item">
+    <h3>{{name}}</h3>
+    <a href="calendar?ball_name={{name}}" class="ball-date" download>
+        <p>
+            {{date}}
+        </p>
+        <p style="font-size: 0.7em">
+            (add to calendar)
+        </p>
+    </a>
+    <p class="ball-theme">{{theme}}</p>
+    <p class="ball-price">{{price}}</p>
+    <div class="buttons-container">
+        {{#each links}}
+            <a href="{{url}}" class="buy-tickets-btn">{{text}}</a>
+        {{/each}}
+    </div>
+</div>
