@@ -224,17 +224,21 @@
   {
     "name": "Newnham JCR Garden Party",
     "date": "2025/06/24",
-    "theme": "TBC",
-    "price": "Last year: £60 (alcohol), £55 (otherwise)",
+    "theme": "Anthomania",
+    "price": "Bursary £41 | Non-Alcohol £46 | Alcohol £51",
     "season": "MAY",
     "links": [
       {
+        "text": "Ticketing",
+        "url": "https://bookoxex.com/Go/Anthomania"
+      },
+      {
         "text": "Website",
-        "url": "https://www.newnhamgardenparty2024.com/"
+        "url": "https://charliest.wixsite.com/jcr-ngp-2025"
       },
       {
         "text": "Instagram",
-        "url": "https://www.instagram.com/newnham.gardenparty/"
+        "url": "https://www.instagram.com/newnham.jcrgardenparty/"
       }
     ]
   },
@@ -255,7 +259,7 @@
       },
       {
         "text": "Website",
-        "url": "https://asurrealsoirée.my.canva.site"
+        "url": "https://asurhttps://charliest.wixsite.com/jcr-ngp-2025realsoirée.my.canva.site"
       }
     ]
   },
