@@ -73,6 +73,7 @@ fn rocket() -> _ {
     let mut balls: Vec<Ball> = serde_json::from_str(&file_content).expect("Failed to parse JSON");
     balls.shuffle(&mut thread_rng());
     balls.sort_by(|ball1, ball2| ball1.links.len().cmp(&ball2.links.len()));
+    balls.reverse();
     let app_state = MayballInfo::new(balls);
     rocket::build()
         .manage(app_state)
