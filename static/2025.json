@@ -194,13 +194,17 @@
   {
     "name": "Clare May Ball",
     "date": "2025/06/24",
-    "theme": "TBC",
-    "price": "£125 (last year)",
+    "theme": "Studio 54",
+    "price": "£180 Clare Member | £200 Non Clare Member",
     "season": "MAY",
     "links": [
       {
         "text": "Instagram",
         "url": "https://www.instagram.com/claremayball2025/"
+      },
+      {
+        "text": "Ticketing",
+        "url": "https://bookoxex.com/Go/ClareMayBall2025"
       }
     ]
   },
