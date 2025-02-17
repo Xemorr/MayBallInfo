@@ -130,13 +130,17 @@
   {
     "name": "Murray Edwards Garden Party",
     "date": "2025/06/22",
-    "theme": "TBC",
-    "price": "£TBC",
+    "theme": "Solar Eclipse",
+    "price": "£45 Non-Alcohol | £50 Alcohol | £55 Guest | £60 Non-Member",
     "season": "MAY",
     "links": [
       {
         "text": "Instagram",
         "url": "https://www.instagram.com/murrayedwardsgardenparty/"
+      },
+      {
+        "text": "TikTok",
+        "url": "https://www.tiktok.com/@murrayedwardsgp/video/7466463245142969632"
       }
     ]
   },
