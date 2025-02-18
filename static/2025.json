@@ -278,13 +278,17 @@
   {
     "name": "King's Affair",
     "date": "2025/06/25",
-    "theme": "TBC",
-    "price": "£TBC",
+    "theme": "Slah mat // Checkmate",
+    "price": "£99 Internal | £150 General",
     "season": "MAY",
     "links": [
       {
         "text": "Website",
         "url": "https://kingsaffair.co.uk/"
+      },
+      {
+        "text": "Ticketing",
+        "url": "https://bookoxex.com/Go/KingsAffair2025"
       }
     ]
   },
