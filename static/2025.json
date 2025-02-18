@@ -19,13 +19,17 @@
   {
     "name": "Clare Hall May Event",
     "date": "2025/06/20",
-    "theme": "TBC",
-    "price": "£TBC",
+    "theme": "Venetian Carnival",
+    "price": "£55 Internal | £65 External",
     "season": "MAY",
     "links": [
       {
         "text": "Website",
         "url": "https://www.clarehall.cam.ac.uk/events/clare-hall-may-week-event/"
+      },
+      {
+        "text": "Ticketing",
+        "url": "https://www.tickettailor.com/events/clarehallgsb/1162239"
       }
     ]
   },
