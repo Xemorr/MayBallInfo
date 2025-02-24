@@ -11,7 +11,7 @@
         "url": "https://girtonspringball.com/"
       },
       {
-        "text": "Tickets",
+        "text": "Ticketing",
         "url": "https://ticketing.girtonspringball.com/"
       }
     ]
@@ -181,7 +181,7 @@
         "url": "https://jesusmayball.com/"
       },
       {
-        "text": "Tickets",
+        "text": "Ticketing",
         "url": "https://tickets.jesusmayball.com/JMB/JMB25/"
       }
     ]
@@ -338,12 +338,16 @@
     "name": "Hughes Hall May Event",
     "date": "2025/06/21",
     "theme": "TBC",
-    "price": "£TBC",
+    "price": "£75 Internal | £85 External",
     "season": "MAY",
     "links": [
       {
         "text": "Instagram",
-        "url": "https://www.instagram.com/hughesmayball/"
+        "url": "https://www.instagram.com/hughesjuneevent/"
+      },
+      {
+        "text": "Ticketing",
+        "url": "https://www.tickettailor.com/events/hugheshallmcr/1550369"
       }
     ]
   },
