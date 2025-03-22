@@ -397,5 +397,26 @@
         "url": "https://www.instagram.com/selwyn_snowball/"
       }
     ]
+  },
+  {
+    "name": "Darwin May Ball",
+    "date": "2025/06/21",
+    "theme": "Carnival of Venice",
+    "price": "Student: £160, Associate: £180",
+    "season": "MAY",
+    "links": [
+      {
+        "text": "Ticketing",
+        "url": "https://tickets.dar.cam.ac.uk/mayball/2025/"
+      },
+      {
+        "text": "Website",
+        "url": "https://bit.ly/DarwinMayBall2025"
+      },
+      {
+        "text": "Instagram",
+        "url": "https://www.instagram.com/darwinmayball/?hl=en"
+      }
+    ]
   }
 ]
