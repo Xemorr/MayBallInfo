@@ -38,14 +38,6 @@
         </div>
     </header>
     <main>
-		<div class="container">
-			<h2>The Spring Balls</h2>
-			<section id="featured-balls">
-                {{#each springballs}}
-                    {{> ball_item}}
-                {{/each}}
-			</section>
-		</div>
         <div class="container">
 			<h2>2025 May Balls</h2>
             <section id="featured-balls">
@@ -62,6 +54,14 @@
                 {{/each}}
 			</section>
 		</div>
+        <div class="container">
+            <h2>The Spring Balls</h2>
+            <section id="featured-balls">
+                {{#each springballs}}
+                    {{> ball_item}}
+                {{/each}}
+            </section>
+        </div>
     </main>
     <footer>
         <div class="container">
