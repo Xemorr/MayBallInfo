@@ -176,3 +176,40 @@ footer p {
         grid-template-columns: repeat(4, 1fr);
     }
 }
+
+#discord-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000; /* Ensure it stays above most other elements */
+    background-color: white;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex; /* To align logo and text in a row */
+    align-items: center;
+    gap: 8px; /* Spacing between the logo and text */
+}
+
+#discord-button a {
+    color: black;
+    text-decoration: none;
+    display: flex; /* To align contents properly */
+    align-items: center;
+}
+
+#discord-button img {
+    width: 18px; /* Adjust the size of the Discord logo */
+    height: auto;
+    margin-right: 10px;
+}
+
+#discord-button:hover {
+    background-color: #dddddd; /* Slightly darker for hover effect */
+    cursor: pointer;
+}
