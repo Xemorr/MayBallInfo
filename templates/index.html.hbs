@@ -39,6 +39,22 @@
     </header>
     <main>
         <div class="container">
+            <div class="section-header">
+                <h2>The Spring Balls</h2>
+                <a href="https://forms.gle/k1X6oxg2PDDaEvui8" class="edit-btn-box" target="_blank" rel="noopener noreferrer" title="Add or edit a ball">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
+                    </svg>
+                    <span>Add/Edit</span>
+                </a>
+            </div>
+            <section id="featured-balls">
+                {{#each springballs}}
+                    {{> ball_item}}
+                {{/each}}
+            </section>
+        </div>
+        <div class="container">
 			<div class="section-header">
 				<h2>The May Balls</h2>
 				<a href="https://forms.gle/k1X6oxg2PDDaEvui8" class="edit-btn-box" target="_blank" rel="noopener noreferrer" title="Add or edit a ball">
@@ -70,26 +86,10 @@
                 {{/each}}
 			</section>
 		</div>
-        <div class="container">
-			<div class="section-header">
-				<h2>The Spring Balls</h2>
-				<a href="https://forms.gle/k1X6oxg2PDDaEvui8" class="edit-btn-box" target="_blank" rel="noopener noreferrer" title="Add or edit a ball">
-					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-						<path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
-					</svg>
-					<span>Add/Edit</span>
-				</a>
-			</div>
-            <section id="featured-balls">
-                {{#each springballs}}
-                    {{> ball_item}}
-                {{/each}}
-            </section>
-        </div>
     </main>
     <footer>
         <div class="container">
-            <p>Are you a ball committee member? Contact me at admin (at) mayball.info with the latest details!</p>
+            <p>Missing Information? Please click the add/edit button to contribute to this page.</p>
 			<p>Alternatively, make a pull request on <a href="https://github.com/Xemorr/MayBallInfo">github</a></p>
             <p>Balls that provide me with more information appear higher on this website. This site receives about 100 views per day, you are missing out by not updating it!</p>
         </div>
