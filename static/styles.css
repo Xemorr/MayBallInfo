@@ -19,7 +19,7 @@ body {
 }
 
 header {
-    background: #85B09A;
+    background: ##6bbbae;
     color: #ffffff;
     padding: 40px 0;
     text-align: center;
@@ -115,7 +115,7 @@ main {
 .buy-tickets-btn {
     flex: 1;
     text-align: center;
-    background-color: #85B09A;
+    background-color: ##6bbbae;
     color: white;
     padding: 12px 0;
     text-decoration: none;
@@ -129,7 +129,7 @@ main {
 }
 
 footer {
-    background: #85B09A;
+    background: ##6bbbae;
     color: #ffffff;
     text-align: center;
     padding: 20px 0;
