@@ -11,5 +11,97 @@
         "url": "https://www.instagram.com/selwyn_snowball/"
       }
     ]
+  },
+  {
+    "name": "Emmanuel May Ball",
+    "date": "2026/06/21",
+    "theme": "-",
+    "price": "-",
+    "season": "MAY",
+    "links": [
+      {
+        "text": "Workers",
+        "url": "https://docs.google.com/forms/d/e/1FAIpQLScEiWPbQP2cARk-0goBD95gYlWeuOkenfeIsSjH9HFC_10L9w/viewform"
+      }
+    ]
+  },
+  {
+    "name": "Trinity May Ball",
+    "date": "2026/06/22",
+    "theme": "-",
+    "price": "-",
+    "season": "MAY",
+    "links": [
+      {
+        "text": "Workers",
+        "url": "https://docs.google.com/forms/d/e/1FAIpQLSfUqPb2rUgsh8HtjOhvHqLhubJE7bdYjGHUFFcnNKDgxtH9CA/viewform"
+      }
+    ]
+  },
+  {
+    "name": "Jesus May Ball",
+    "date": "2026/06/22",
+    "theme": "-",
+    "price": "-",
+    "season": "MAY",
+    "links": [
+      {
+        "text": "Workers",
+        "url": "https://work.jesusmayball.com"
+      }
+    ]
+  },
+  {
+    "name": "St John's May Ball",
+    "date": "2026/06/23",
+    "theme": "-",
+    "price": "-",
+    "season": "MAY",
+    "links": []
+  },
+  {
+    "name": "Gonville & Caius May Ball",
+    "date": "2026/06/23",
+    "theme": "-",
+    "price": "-",
+    "season": "MAY",
+    "links": []
+  },
+  {
+    "name": "Trinity Hall June Event",
+    "date": "2026/06/25",
+    "theme": "-",
+    "price": "-",
+    "season": "MAY",
+    "links": []
+  },
+  {
+    "name": "St Catharine's May Ball",
+    "date": "2026/06/25",
+    "theme": "-",
+    "price": "-",
+    "season": "MAY",
+    "links": [
+      {
+        "text": "Workers",
+        "url": "https://docs.google.com/forms/d/e/1FAIpQLSeFE-NHy-HHOD3lC5m6CATXjNed6vD_IILihpHFqF1O0WjJiw/viewform"
+      }
+    ]
+  },
+  {
+    "name": "Peterhouse May Ball",
+    "date": "2026/06/26",
+    "theme": "-",
+    "price": "-",
+    "season": "MAY",
+    "links": []
+  },
+  {
+    "name": "Christ's May Ball",
+    "date": "2026/06",
+    "theme": "-",
+    "price": "-",
+    "season": "MAY",
+    "links": []
   }
 ]
