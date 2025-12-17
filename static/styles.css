@@ -70,7 +70,7 @@ main {
 .edit-btn {
     position: absolute;
     top: 10px;
-    right: 10px;
+    left: 10px;
     font-size: 1.2em;
     text-decoration: none;
     opacity: 0.6;
@@ -83,11 +83,12 @@ main {
 }
 
 .edit-btn-inline {
-    font-size: 0.6em;
+    font-size: 0.8em;
     text-decoration: none;
     opacity: 0.6;
     transition: opacity 0.2s ease;
-    vertical-align: super;
+    vertical-align: middle;
+    margin-right: 0.3em;
 }
 
 .edit-btn-inline:hover {
