@@ -82,6 +82,18 @@ main {
     opacity: 1;
 }
 
+.edit-btn-inline {
+    font-size: 0.6em;
+    text-decoration: none;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+    vertical-align: super;
+}
+
+.edit-btn-inline:hover {
+    opacity: 1;
+}
+
 .ball-thumbnail {
     width: 100%;
     height: auto;
