@@ -11,7 +11,6 @@ rocket_dyn_templates = {  version="0.2.0", features=["handlebars"] }
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 chrono = "0.4.39"
-tempfile = "3.16.0"
 rand = "0.8.5"
 chrono-tz = "0.10.1"
 uuid = { version = "1.13.1", features = ["v4"] }
