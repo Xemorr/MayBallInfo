@@ -90,7 +90,16 @@
     "theme": "-",
     "price": "-",
     "season": "MAY",
-    "links": []
+    "links": [
+      {
+        "text": "Instagram",
+        "url": "https://www.instagram.com/thejuneevent/?hl=en"
+      },
+      {
+        "text": "Website",
+        "url": "https://www.thjuneevent.co.uk"
+      }
+    ]
   },
   {
     "name": "St Catharine's May Ball",
