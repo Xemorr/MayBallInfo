@@ -1,116 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta property="og:title" content="Mayball Information"/>
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.mayball.info" />
-<meta property="og:description" content="A list of all of the mayballs in 2026" />
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-<meta name="theme-color" content="#00FFFF">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cambridge May Balls 2026</title>
-    <link rel="stylesheet" href="/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-	<link rel="manifest" href="/manifest.json">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8664079953509408"
-            crossorigin="anonymous">
-    </script>
-    <script src="htmx.min.js"></script>
-</head>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/styles-redesign.css">
+    </head>
 <body>
-	<script>
-		if ('serviceWorker' in navigator) {
-			window.addEventListener('load', () => {
-				navigator.serviceWorker.register('/service-worker.js').then(registration => {
-					console.log('ServiceWorker registration successful with scope: ', registration.scope);
-				}, err => {
-					console.log('ServiceWorker registration failed: ', err);
-				});
-			});
-		}
-	</script>
     <header>
         <div class="container">
             <h1>Cambridge May Balls 2026</h1>
-            <p>Navigate Cambridge's may week with greater ease!</p>
-			<p><a href="previous-years/2025.html">Check out last year's may balls!</a></p>
+            <p>Navigate Cambridge's May Week with greater ease!</p>
+            <a href="previous-years/2025.html">View 2025 Archive →</a>
         </div>
     </header>
+
     <main>
         <div class="container">
             <div class="section-header">
                 <h2>The Spring Balls</h2>
-                <a href="https://forms.gle/k1X6oxg2PDDaEvui8" class="edit-btn-box" target="_blank" rel="noopener noreferrer" title="Add or edit a ball">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
-                    </svg>
+                <a href="https://forms.gle/k1X6oxg2PDDaEvui8" class="edit-btn-box" target="_blank">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
                     <span>Add/Edit</span>
                 </a>
             </div>
-            <section id="featured-balls">
+            <section class="featured-balls">
                 {{#each springballs}}
                     {{> ball_item}}
                 {{/each}}
             </section>
         </div>
+
         <div class="container">
-			<div class="section-header">
-				<h2>The May Balls</h2>
-				<a href="https://forms.gle/k1X6oxg2PDDaEvui8" class="edit-btn-box" target="_blank" rel="noopener noreferrer" title="Add or edit a ball">
-					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-						<path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
-					</svg>
-					<span>Add/Edit</span>
-				</a>
-			</div>
-            <section id="featured-balls">
+            <div class="section-header">
+                <h2>The May Balls</h2>
+                <a href="https://forms.gle/k1X6oxg2PDDaEvui8" class="edit-btn-box" target="_blank">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+                    <span>Add/Edit</span>
+                </a>
+            </div>
+            <section class="featured-balls">
                 {{#each mayballs}}
                     {{> ball_item}}
                 {{/each}}
             </section>
         </div>
-		<div class="container">
-			<div class="section-header">
-				<h2>The Winter Balls</h2>
-				<a href="https://forms.gle/k1X6oxg2PDDaEvui8" class="edit-btn-box" target="_blank" rel="noopener noreferrer" title="Add or edit a ball">
-					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-						<path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
-					</svg>
-					<span>Add/Edit</span>
-				</a>
-			</div>
-			<section id="featured-balls">
+
+        <div class="container">
+            <div class="section-header">
+                <h2>The Winter Balls</h2>
+                <a href="https://forms.gle/k1X6oxg2PDDaEvui8" class="edit-btn-box" target="_blank">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+                    <span>Add/Edit</span>
+                </a>
+            </div>
+            <section class="featured-balls">
                 {{#each winterballs}}
                     {{> ball_item}}
                 {{/each}}
-			</section>
-		</div>
-    </main>
-    <footer>
-        <div class="container">
-            <p>Missing Information? Please click the add/edit button to contribute to this page.</p>
-			<p>Alternatively, make a pull request on <a href="https://github.com/Xemorr/MayBallInfo">github</a></p>
-            <p>Balls that provide me with more information appear higher on this website. This site receives about 100 views per day, you are missing out by not updating it!</p>
+            </section>
         </div>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8664079953509408"
-                crossorigin="anonymous"></script>
-        <!-- Bottom of page advert -->
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-8664079953509408"
-             data-ad-slot="9764938284"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-    </footer>
+    </main>
+
     <div id="discord-button">
         <a href="https://discord.gg/aankm2ytas" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="Discord Logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="Discord" width="18">
             Contribute
         </a>
     </div>
+
+    <footer>
+        <div class="container">
+            <p>Are you a ball committee member? Use the Add/Edit button</p>
+            <p>Need to get in touch? Contact me at admin (at) mayball.info!</p>
+            <p>Alternatively, make a pull request on <a href="https://github.com/Xemorr/MayBallInfo">github</a></p>
+            <p>Balls that provide me with more information appear higher on this website. This site receives about 100 views per day, you are missing out by not updating it!</p>
+        </div>
+    </footer>
 </body>
 </html>
