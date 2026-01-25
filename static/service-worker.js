@@ -6,7 +6,8 @@ self.addEventListener('install', (event) => {
                 return cache.addAll([
                     '/',
                     '/index.html',
-                    '/styles.css',
+                    '/styles-redesign.css',
+                    '/styles-redesign.css',
                     // Add other assets and pages you want to cache
                 ]);
             })

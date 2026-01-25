@@ -1,0 +1,250 @@
+:root {
+    --cambridge-blue: #A3C1AD;
+    --deep-navy: #00112c;
+    --accent-gold: #d4af37;
+    --bg-soft: #f9fbfb;
+    --text-main: #2d3436;
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    color: var(--text-main);
+    background-color: var(--bg-soft);
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* --- Header --- */
+header {
+    background: linear-gradient(135deg, var(--deep-navy) 0%, #003b5c 100%);
+    color: white;
+    padding: 80px 0 100px;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    margin-bottom: 2em;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    margin-bottom: 0.2em;
+}
+
+header p {
+    font-size: 1.2em;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+header a {
+    color: var(--cambridge-blue);
+    text-decoration: none;
+    font-size: 0.9em;
+    border-bottom: 1px solid transparent;
+    transition: 0.3s;
+}
+
+header a:hover {
+    border-bottom-color: var(--cambridge-blue);
+}
+
+/* --- Section Headers --- */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 25px;
+    border-left: 4px solid var(--cambridge-blue);
+    padding-left: 15px;
+}
+
+.section-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin: 0;
+}
+
+/* --- The Grid --- */
+.featured-balls {
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    padding: 20px 0 50px;
+}
+
+/* --- The Card (Ball Item) --- */
+.ball-item {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0,0,0,0.03);
+    text-align: center;
+}
+
+.ball-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.ball-item h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: var(--deep-navy);
+}
+
+.ball-date-link {
+    text-decoration: none;
+    color: #636e72;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.cal-hint {
+    display: block;
+    font-size: 0.7rem;
+    text-transform: none;
+    opacity: 0.6;
+}
+
+.ball-theme {
+    font-size: 0.95rem;
+    color: var(--accent-gold);
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.ball-price {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* --- Buttons --- */
+.buttons-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.btn {
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border: 1px solid #dfe6e9;
+    color: #636e72;
+    background: #fff;
+    transition: 0.2s;
+}
+
+/* This targets any button where the text is "Tickets".
+   Note: class names are case-sensitive.
+   If your data says "Tickets", use .btn-Tickets
+*/
+.btn-Tickets, .btn-tickets {
+    grid-column: span 2;
+    background-color: var(--deep-navy) !important;
+    color: white !important;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #f1f2f6;
+    transform: translateY(-1px);
+}
+
+.btn-Tickets:hover, .btn-tickets:hover {
+    background-color: #00254a !important;
+}
+
+/* Instagram specific style */
+.btn-Instagram, .btn-insta {
+    background-color: #fdf2f7;
+    color: #d63384;
+}
+
+/* --- Edit Button Box --- */
+.edit-btn-box {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border: 1px solid #dfe6e9;
+    border-radius: 20px;
+    text-decoration: none;
+    background: white;
+    font-size: 0.8rem;
+    color: var(--text-main);
+    transition: 0.2s;
+}
+
+.edit-btn-box:hover {
+    border-color: var(--cambridge-blue);
+    background: #fdfdfd;
+}
+
+/* --- Discord Button --- */
+#discord-button {
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    background: white;
+    padding: 10px 18px;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+#discord-button:hover {
+    transform: scale(1.05);
+}
+
+#discord-button a {
+    color: #5865F2;
+    text-decoration: none;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* --- Footer --- */
+footer {
+    background: var(--deep-navy);
+    color: white;
+    padding: 60px 0;
+    margin-top: 80px;
+    text-align: center;
+}
+
+footer p { margin-bottom: 10px; opacity: 0.8; font-size: 0.9rem; }
+footer a { color: var(--cambridge-blue); }
+
+@media (max-width: 768px) {
+    header h1 { font-size: 2.2rem; }
+    .featured-balls { grid-template-columns: 1fr; }
+}
