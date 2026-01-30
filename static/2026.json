@@ -138,10 +138,14 @@
   {
     "name": "Christ's Soirée",
     "date": "2026/06/23",
-    "theme": "-",
-    "price": "£115",
+    "theme": "Poets & Lovers",
+    "price": "£115 University Members / £125 Guests",
     "season": "MAY",
     "links": [
+      {
+        "text": "Tickets",
+        "url": "https://christs.mayball.cloud/2026"
+      },
       {
         "text": "Instagram",
         "url": "https://www.instagram.com/christsmayball/"
