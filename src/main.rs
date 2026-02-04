@@ -62,7 +62,6 @@ async fn calendar(state: &State<MayballInfo>, ball_name: String) -> Option<Named
     match result {
         Ok(value) => Option::from(value),
         Err(error) => {
-            println!("Error: {:?}", error);
             None
         }
     }
