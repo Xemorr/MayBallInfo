@@ -14,6 +14,7 @@ use rocket_dyn_templates::{Template, context};
 use rand::seq::SliceRandom;
 use rand::thread_rng;
 use uuid::Uuid;
+use anyhow::Result;
 use crate::types::{Ball, MayballInfo};
 
 #[get("/")]
@@ -21,15 +22,15 @@ fn index(state: &State<MayballInfo>) -> Template {
     Template::render("index", context! { springballs: &*state.springballs, winterballs: &*state.winterballs, mayballs: &*state.mayballs })
 }
 
-async fn generate_ics(ball: &Ball) -> std::io::Result<NamedFile> {
+async fn generate_ics(ball: &Ball) -> Result<NamedFile> {
     let mut calendar = Calendar::new();
-    let date = NaiveDate::parse_from_str(&ball.date, "%Y/%m/%d").unwrap();
+    let date = NaiveDate::parse_from_str(&ball.date, "%Y/%m/%d")?;
 
     let local_start = London
         .from_local_datetime(&NaiveDateTime::new(date, NaiveTime::from_hms_opt(19, 0, 0).unwrap()))
         .single()
         .unwrap();
-    
+
     let local_end = local_start.add(Duration::hours(11));
 
     let mut ical_event = icalendar::Event::new();
@@ -43,7 +44,7 @@ async fn generate_ics(ball: &Ball) -> std::io::Result<NamedFile> {
     let file_path = temp_dir().join(format!("{}.ics", ball.name));
     fs::write(&file_path, calendar.to_string())?;
 
-    NamedFile::open(file_path).await
+    Ok(NamedFile::open(file_path).await?)
 }
 
 #[get("/calendar?<ball_name>")]
