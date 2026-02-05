@@ -50,14 +50,16 @@ impl Serialize for Ball {
     where
         S: Serializer,
     {
-        let date = NaiveDate::parse_from_str(&self.date, "%Y/%m/%d").unwrap();
-        let formatted_date = format!(
-            "{}, {} {} {}",
-            date.format("%A"),
-            ordinal(date.day()),
-            date.format("%B"),
-            date.format("%Y")
-        );
+        let formatted_date = NaiveDate::parse_from_str(&self.date, "%Y/%m/%d").map(|date| {
+            return format!(
+                "{}, {} {} {}",
+                date.format("%A"),
+                ordinal(date.day()),
+                date.format("%B"),
+                date.format("%Y")
+            );
+        }).unwrap_or(self.date.clone());
+
 
         let mut state = serializer.serialize_struct("Ball", 6)?;
         state.serialize_field("name", &self.name)?;
