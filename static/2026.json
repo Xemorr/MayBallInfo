@@ -15,13 +15,17 @@
   {
     "name": "Hughes Hall June Event",
     "date": "2026/06/20",
-    "theme": "-",
-    "price": "-",
+    "theme": "Aurora",
+    "price": "£85",
     "season": "MAY",
     "links": [
       {
         "text": "Instagram",
         "url": "https://www.instagram.com/hughesjuneevent"
+      },
+      {
+        "text": "Tickets",
+        "url": "https://buytickets.at/hugheshallmcr/1995171"
       }
     ]
   },
