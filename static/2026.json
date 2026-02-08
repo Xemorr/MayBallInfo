@@ -7,7 +7,7 @@
     "season": "WINTER",
     "links": [
       {
-        "text": "Website",
+        "text": "Instagram",
         "url": "https://www.instagram.com/selwyn_snowball/"
       }
     ]
@@ -15,26 +15,34 @@
   {
     "name": "Hughes Hall June Event",
     "date": "2026/06/20",
-    "theme": "-",
-    "price": "-",
+    "theme": "Aurora",
+    "price": "£85",
     "season": "MAY",
     "links": [
       {
         "text": "Instagram",
         "url": "https://www.instagram.com/hughesjuneevent"
+      },
+      {
+        "text": "Tickets",
+        "url": "https://buytickets.at/hugheshallmcr/1995171"
       }
     ]
   },
   {
     "name": "Emmanuel May Ball",
     "date": "2026/06/21",
-    "theme": "-",
+    "theme": "",
     "price": "-",
     "season": "MAY",
     "links": [
       {
         "text": "Workers",
         "url": "https://docs.google.com/forms/d/e/1FAIpQLScEiWPbQP2cARk-0goBD95gYlWeuOkenfeIsSjH9HFC_10L9w/viewform"
+      },
+      {
+        "text": "Instagram",
+        "url": "https://www.instagram.com/emmanuelmayball"
       }
     ]
   },
@@ -146,8 +154,8 @@
   {
     "name": "Christ's Soirée",
     "date": "2026/06/23",
-    "theme": "-",
-    "price": "£115",
+    "theme": "Poets & Lovers",
+    "price": "£115 University Members / £125 Guests",
     "season": "MAY",
     "links": [
       {
@@ -161,6 +169,10 @@
       {
         "text": "Workers",
         "url": "https://docs.google.com/forms/d/e/1FAIpQLSc7kSFxjt7Pitp01SxxENwWLH_H1eRlmYGSjDBHNqSxXhs70Q/viewform?pli=1"
+      },
+      {
+        "text": "Tickets",
+        "url": "https://christs.mayball.cloud/2026"
       }
     ]
   },
@@ -185,6 +197,19 @@
       {
         "text": "Workers",
         "url": "https://forms.gle/P7NMRejEUHFgELLP7"
+      }
+    ]
+  },
+  {
+    "name": "Newnham MCR Garden Party",
+    "date": "-",
+    "theme": "-",
+    "price": "-",
+    "season": "MAY",
+    "links": [
+      {
+        "text": "Instagram",
+        "url": "https://www.instagram.com/mcrnewnhamgardenparty/"
       }
     ]
   }
