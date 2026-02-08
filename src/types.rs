@@ -26,6 +26,22 @@ pub struct Ball {
     pub links: Vec<Link>,
 }
 
+impl Ball {
+    pub fn score(&self) -> u32 {
+        let mut score = self.links.len();
+        if (self.date != "-") {
+            score += 1;
+        }
+        if (self.price != "-") {
+            score += 1;
+        }
+        if (self.theme != "-") {
+            score += 1;
+        }
+        score as u32
+    }
+}
+
 pub struct MayballInfo {
     pub mayballs: Arc<Vec<Ball>>,
     pub springballs: Arc<Vec<Ball>>,

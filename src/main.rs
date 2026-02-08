@@ -72,7 +72,9 @@ fn rocket() -> _ {
     let file_content = fs::read_to_string("static/2026.json").expect("Failed to read JSON file");
     let mut balls: Vec<Ball> = serde_json::from_str(&file_content).expect("Failed to parse JSON");
     balls.shuffle(&mut thread_rng());
-    balls.sort_by(|ball1, ball2| ball1.links.len().cmp(&ball2.links.len()));
+    balls.sort_by(|ball1, ball2| {
+        ball1.score().cmp(&ball2.score())
+    });
     balls.reverse();
     let app_state = MayballInfo::new(balls);
     rocket::build()
