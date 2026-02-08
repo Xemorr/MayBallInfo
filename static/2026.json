@@ -7,7 +7,7 @@
     "season": "WINTER",
     "links": [
       {
-        "text": "Instagram",
+        "text": "Website",
         "url": "https://www.instagram.com/selwyn_snowball/"
       }
     ]
@@ -15,17 +15,13 @@
   {
     "name": "Hughes Hall June Event",
     "date": "2026/06/20",
-    "theme": "Aurora",
-    "price": "£85",
+    "theme": "-",
+    "price": "-",
     "season": "MAY",
     "links": [
       {
         "text": "Instagram",
         "url": "https://www.instagram.com/hughesjuneevent"
-      },
-      {
-        "text": "Tickets",
-        "url": "https://buytickets.at/hugheshallmcr/1995171"
       }
     ]
   },
@@ -39,10 +35,6 @@
       {
         "text": "Workers",
         "url": "https://docs.google.com/forms/d/e/1FAIpQLScEiWPbQP2cARk-0goBD95gYlWeuOkenfeIsSjH9HFC_10L9w/viewform"
-      },
-      {
-        "text": "Instagram",
-        "url": "https://www.instagram.com/emmanuelmayball/"
       }
     ]
   },
@@ -108,17 +100,25 @@
   {
     "name": "Trinity Hall June Event",
     "date": "2026/06/25",
-    "theme": "-",
-    "price": "-",
+    "theme": "Dancing with the Faeries",
+    "price": "£139",
     "season": "MAY",
     "links": [
       {
         "text": "Instagram",
-        "url": "https://www.instagram.com/thejuneevent/?hl=en"
+        "url": "https://www.instagram.com/thejuneevent/"
       },
       {
         "text": "Website",
-        "url": "https://www.thjuneevent.co.uk"
+        "url": "https://www.thjuneevent.co.uk/"
+      },
+      {
+        "text": "Tickets",
+        "url": "https://fixr.co/event/trinity-hall-june-event-2026-tickets-937501456?lang=en-US"
+      },
+      {
+        "text": "Workers",
+        "url": "https://docs.google.com/forms/d/e/1FAIpQLSemWV2DCslr4Cl3y34rEiCUIfX370qn_zehsUSFnYqWLzrv2Q/viewform"
       }
     ]
   },
@@ -146,14 +146,10 @@
   {
     "name": "Christ's Soirée",
     "date": "2026/06/23",
-    "theme": "Poets & Lovers",
-    "price": "£115 University Members / £125 Guests",
+    "theme": "-",
+    "price": "£115",
     "season": "MAY",
     "links": [
-      {
-        "text": "Tickets",
-        "url": "https://christs.mayball.cloud/2026"
-      },
       {
         "text": "Instagram",
         "url": "https://www.instagram.com/christsmayball/"
@@ -169,15 +165,26 @@
     ]
   },
   {
-    "name": "Newnham MCR Garden Party",
-    "date": "-",
-    "theme": "-",
-    "price": "-",
-    "season": "MAY",
+    "name": "King's Affair",
+    "date": "2026/06/24",
+    "theme": "Anthropocene",
+    "price": "£179 1st Release, £189 2nd Release",
     "links": [
       {
         "text": "Instagram",
-        "url": "https://www.instagram.com/mcrnewnhamgardenparty/"
+        "url": "https://www.instagram.com/kingsaffair/"
+      },
+      {
+        "text": "Website",
+        "url": "https://kingsaffair.co.uk"
+      },
+      {
+        "text": "Tickets",
+        "url": "https://bookoxex.com/Go/KingsAffair2026"
+      },
+      {
+        "text": "Workers",
+        "url": "https://forms.gle/P7NMRejEUHFgELLP7"
       }
     ]
   }
