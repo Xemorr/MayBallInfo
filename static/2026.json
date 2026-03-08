@@ -133,13 +133,21 @@
   {
     "name": "St Catharine's May Ball",
     "date": "2026/06/25",
-    "theme": "-",
-    "price": "-",
+    "theme": "Catzcabana",
+    "price": "£177",
     "season": "MAY",
     "links": [
       {
         "text": "Workers",
         "url": "https://docs.google.com/forms/d/e/1FAIpQLSeFE-NHy-HHOD3lC5m6CATXjNed6vD_IILihpHFqF1O0WjJiw/viewform"
+      },
+      {
+        "text": "Website",
+        "url": "https://www.catzmayball.co.uk/"
+      },
+      {
+        "text": "Tickets",
+        "url": "https://tickets.catzmayball.co.uk/2026"
       }
     ]
   },
@@ -180,7 +188,7 @@
     "name": "King's Affair",
     "date": "2026/06/24",
     "theme": "Anthropocene",
-    "price": "£179 1st Release, £189 2nd Release",
+    "price": "£189",
     "season": "MAY",
     "links": [
       {
@@ -211,6 +219,21 @@
       {
         "text": "Instagram",
         "url": "https://www.instagram.com/mcrnewnhamgardenparty/"
+      }
+    ]
+  },
+  {
+    "name": "Churchill June Event",
+    "date": "2026/06/21",
+    "theme": "Summer Solstice",
+    "links": [
+      {
+        "text": "Instagram",
+        "url": "https://www.instagram.com/chumayball/"
+      },
+      {
+        "text": "Website",
+        "url": "https://www.churchillmayball.co.uk/"
       }
     ]
   }
