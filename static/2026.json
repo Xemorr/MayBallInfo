@@ -32,8 +32,8 @@
   {
     "name": "Emmanuel May Ball",
     "date": "2026/06/21",
-    "theme": "",
-    "price": "-",
+    "theme": "Putting on the Ritz",
+    "price": "£210",
     "season": "MAY",
     "links": [
       {
@@ -43,6 +43,14 @@
       {
         "text": "Instagram",
         "url": "https://www.instagram.com/emmanuelmayball"
+      },
+      {
+        "text": "Website",
+        "url": "https://emmamayball.co.uk/"
+      },
+      {
+        "text": "Tickets",
+        "url": "https://tickets.emmamayball.co.uk/"
       }
     ]
   },
