@@ -255,6 +255,27 @@
     ]
   },
   {
+    "name": "Newnham JCR Garden Party",
+    "date": "2026/06/23",
+    "theme": "Newnfest",
+    "price": "£66",
+    "season": "MAY",
+    "links": [
+      {
+        "text": "Instagram",
+        "url": "https://www.instagram.com/newnham.jcrgardenparty/"
+      },
+      {
+        "text": "Tickets",
+        "url": "https://bookoxex.com/Go/NewnhamJCRGardenParty2026"
+      },
+      {
+        "text": "Website",
+        "url": "https://bookoxex.com/Go/NewnhamJCRGardenParty2026"
+      }
+    ]
+  },
+  {
     "name": "Churchill June Event",
     "date": "2026/06/21",
     "theme": "Summer Solstice",
@@ -268,6 +289,19 @@
       {
         "text": "Website",
         "url": "https://www.churchillmayball.co.uk/"
+      }
+    ]
+  },
+  {
+    "name": "EdFest",
+    "date": "2026/06/28",
+    "theme": "Canterbury Tales",
+    "price": "£13.50",
+    "season": "MAY",
+    "links": [
+      {
+        "text": "Tickets",
+        "url": "https://www.eventbrite.com/e/edfest-2026-tickets-1984870919351?aff=oddtdtcreator"
       }
     ]
   }
